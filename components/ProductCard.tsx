@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function ProductCard({ product }: any) {
   const message = `Halo saya mau order ${product.name}`;
-  const url = `https://wa.me/62819175776677?text=${encodeURIComponent(
+  const url = `https://wa.me/6281917977687?text=${encodeURIComponent(
     message
   )}`;
 
