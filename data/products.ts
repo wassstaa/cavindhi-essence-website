@@ -7,9 +7,9 @@ export type Product = {
   shortDesc: string;
   description: string;
   notes: {
-    top: string[];
-    mid: string[];
-    base: string[];
+    top: readonly string[];
+    mid: readonly string[];
+    base: readonly string[];
   };
 };
 
@@ -27,11 +27,11 @@ Inspired by the word Lune, meaning moon, Verelune is a men’s fragrance crafted
 Fresh lavender and mint open the scent with a cool, clean touch.
 As it develops, vanilla and benzoin bring creamy warmth.
 The base of honey, tonka bean, and tobacco creates a deep, dark sweetness that lingers long after.
-    `.trim(), // 🔥 FIX kecil (biar gak ada spasi aneh)
+    `.trim(),
     notes: {
-      top: ["Lavender", "Mint"],
-      mid: ["Vanilla", "Benzoin"],
-      base: ["Honey", "Tonka Bean", "Tobacco"],
+      top: ["Lavender", "Mint"] as string[],
+      mid: ["Vanilla", "Benzoin"] as string[],
+      base: ["Honey", "Tonka Bean", "Tobacco"] as string[],
     },
   },
 
@@ -50,9 +50,9 @@ In the heart, rich chocolate and creamy notes create a warm indulgence.
 The base settles into a soft, musky sweetness that feels intimate and long-lasting.
     `.trim(),
     notes: {
-      top: ["Rose", "Fruity Notes"],
-      mid: ["Chocolate", "Creamy Notes"],
-      base: ["Musk", "Sweet Notes"],
+      top: ["Rose", "Fruity Notes"] as string[],
+      mid: ["Chocolate", "Creamy Notes"] as string[],
+      base: ["Musk", "Sweet Notes"] as string[],
     },
   },
 
@@ -71,9 +71,9 @@ Bubblegum adds a fun, nostalgic twist.
 Vanilla and musk settle softly, leaving a warm and creamy trail.
     `.trim(),
     notes: {
-      top: ["Pear", "Peach"],
-      mid: ["Bubblegum"],
-      base: ["Vanilla", "Musk"],
+      top: ["Pear", "Peach"] as string[],
+      mid: ["Bubblegum"] as string[],
+      base: ["Vanilla", "Musk"] as string[],
     },
   },
-] as const; // 🔥 tambahan biar TS makin strict & aman
+]
