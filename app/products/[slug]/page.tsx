@@ -15,7 +15,7 @@ export default function ProductDetail({
 
   // 🔥 AUTO CHAT WA
   const message = `Halo, saya tertarik dengan parfum ${product.name}. Apakah masih tersedia?`;
-  const url = `https://wa.me/62819175776677?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/6281917977687?text=${encodeURIComponent(message)}`;
 
   return (
     <section className={`px-6 py-20 min-h-screen ${product.gradient}`}>
